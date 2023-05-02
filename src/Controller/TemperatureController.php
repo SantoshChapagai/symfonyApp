@@ -18,8 +18,8 @@ class TemperatureController {
  }
 
  $fahrenheit = ($temp * 9 / 5) + 32;
-
- return new Response($fahrenheit);
+ $celsius = 5/9 * ($temp - 32);
+ return new Response("The temperature $temp in Fahrenheit is $fahrenheit and celsius is $celsius");
 
  }
 }
